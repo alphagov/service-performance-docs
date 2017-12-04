@@ -3,6 +3,8 @@ sudo: false
 language: ruby
 cache:
   bundler: true
+before_script:
+  - cp
 script:
   - bundle exec middleman build
 env:
@@ -16,6 +18,6 @@ deploy:
   api: https://api.cloud.service.gov.uk
   organization: government-service-data
   space: staging
-  manifest: manifest-staging.yml
+  manifest: manifest.staging.yml
   on:
     branch: staging
