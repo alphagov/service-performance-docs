@@ -3,8 +3,6 @@ sudo: false
 language: ruby
 cache:
   bundler: true
-before_script:
-  - cp
 script:
   - bundle exec middleman build
 env:
